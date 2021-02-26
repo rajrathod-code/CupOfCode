@@ -32,9 +32,11 @@
                         <button type="submit" class="btn btn-primary"
                             style="width:100px; height:35px;font-size:17px; border:0;">Submit</button>
                             <br><br>
+                            {{#if message}}
                         <div class="alert alert-success">
                             <strong>{{success}}</strong> Your Inquiery is submites successfully we will contect you with in 24Hours.
                         </div>
+                        {{/if}}
                     </form>
                 </div>
             </div>
