@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{!-- Adding Bootstrap link --}}
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    {{!-- Bootstrap link --}}
+    <link rel="shortcut icon" href="favimg.jpg" type="image/.jpg">
+    {{!-- Font family --}}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;1,500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Federo&display=swap" rel="stylesheet">
+
+    <title>CupOfCode</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+        .our-services {
+
+            border-radius: 10px;
+            box-shadow: 0 0 25px 0 gray;
+            margin-top: 30px;
+            padding: 20px;
+
+        }
+
+        .our-privacy {
+
+            border-radius: 10px;
+            box-shadow: 0 0 25px 0 gray;
+            margin-top: 30px;
+            padding: 20px;
+
+        }
+
+        .our-backup {
+
+            border-radius: 10px;
+            box-shadow: 0 0 25px 0 gray;
+            margin-top: 30px;
+            padding: 20px;
+
+        }
+
+        .our-sslsecures {
+
+            border-radius: 10px;
+            box-shadow: 0 0 25px 0 gray;
+            margin-top: 30px;
+            padding: 20px;
+
+        }
+
+        .our-services:hover {
+            box-shadow: 0 0 25px 0 rgba(33, 39, 221, 0.2);
+            cursor: pointer;
+            background-image: linear-gradient(-45deg, #f33474 0%, #f55b2a 50%);
+        }
+
+        .our-privacy:hover {
+            box-shadow: 0 0 25px 0 rgba(13, 156, 8, 0.2);
+            cursor: pointer;
+            background-image: linear-gradient(-45deg, #318d1a 0%, #129160 50%);
+        }
+
+        .our-backup:hover {
+            box-shadow: 0 0 25px 0 rgba(13, 156, 8, 0.2);
+            cursor: pointer;
+            background-image: linear-gradient(-45deg, #1a698d 0%, #431291 50%);
+        }
+
+        .our-sslsecures:hover {
+            box-shadow: 0 0 25px 0 rgba(13, 156, 8, 0.2);
+            cursor: pointer;
+            background-image: linear-gradient(-45deg, #691a8d 0%, #12914b 50%);
+        }
+
+        .loader_bg{
+            position: fixed;
+            z-index: 999999;
+            background-color: #fff;
+            width: 100%;
+            height: 100%;
+
+        }
+        .loader{
+            border: 0 solid transparent;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: calc(50vh - 75px);
+            left: calc(50vw - 75px);
+        }
+        .loader::before, .loader::after {
+            content: '';
+            border: 1em solid #ff5733;
+            border-radius: 50%;
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: loader 2s linear infinite;
+            opacity: 0;
+
+        }
+        .loader::before{
+            animation-delay: .5s;
+        }
+        @keyframes loader{
+            0%{
+                transform: scale(0);
+                opacity: 0;
+            }
+            50%{
+                opacity: 1;
+            }
+            100%{
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader_bg">
+        <div class="loader">
+
+        </div>
+    </div>
+    {{>navbar}}
+    {{!-- Hero section starts --}}
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="row">
+                    {{!-- Left-side text --}}
+                    <div class="col-md-6 col-12 hero-text order-md-0 order-1 mx-auto d-block"> {{!--order-md-0= left AND
+                        order-1 = Down --}}
+                        <h1 class="col-md-12 col-12 mx-auto d-block"
+                            style="font-family: 'Ubuntu', sans-serif; font-size:50px">WE WILL HELP YOU TO</h1>
+                        <h1 class="col-md-13 col-12 mx-auto d-block"
+                            style="font-family: 'Ubuntu', sans-serif; color:blue; font-size:50px">GROW YOUR BUSINESS
+                        </h1>
+                        <p class="col-md-12 col-12 mx-auto d-block" class="mt-3"
+                            style="font-family: 'Federo', sans-serif; font-size:20px">We are the team of <span
+                                class="bold-style"><b>Professional developer.</b> </span></p>
+                        <button class="btn-style btn-primary"
+                            style="width:100px; height:35px;font-size:17px; border:0; margin-left:15px">Read
+                            More</button>
+                    </div>
+                    {{!-- Right side --}}
+                    <div class="col-md-6 col-12 hero-text order-md-1 order-0">{{!--order-md-1= Right --}}
+                        <figure>
+                            <img class="img-responsive mx-auto d-block" style="width: 300px;height:270px; "
+                                src="images.png" alt="Image">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{!-- Hero section ends --}}
+
+    {{!-- About section starts --}}
+    {{>about}}
+    {{!-- About section ends --}}
+
+    {{!-- Service section starts --}}
+    {{>service}}
+
+    {{!-- Service section ends --}}
+
+    {{!-- Maps section starts --}}
+    {{>maps}}
+    {{!-- Maps section ends --}}
+
+    {{!-- Form Starts here --}}
+    {{>contact}}
+
+    {{!-- Form Ends here --}}
+
+    {{!-- Footer starts --}}
+        <div align="center" class="container-fluid" style="width: 100%;height:40px;background-color:gray; margin-top:50px;">
+            <h2>Made by Raj Rathod</h2>
+        </div>
+    {{!-- Footer-ends --}}
+
+        <script src="../minjq/jquery.min.js" type="text/javascript"></script>
+         <script>
+            setTimeout(function(){
+                $('.loader_bg').fadeToggle();
+            },1500);
+        </script>
+        <script src="../jq/jquery.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+       
+</body>
+
+</html>
